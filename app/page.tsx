@@ -15,16 +15,16 @@ export default function HomePage() {
   return (
     <>
       <section data-section="hero" className="concrete-grain">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:py-14">
           <div>
             <YearTick />
             <h1 className="max-w-[14ch] text-[2.8rem] sm:text-6xl lg:text-[4.4rem]">
               Afwerking uit één Achterhoekse werkplaats
             </h1>
-            <p className="mt-6 max-w-[40rem]">
+            <p className="mt-5 max-w-[40rem] leading-snug sm:mt-6 sm:leading-normal">
               Schildersbedrijf Dankbaar schildert, beglaast, werkt wanden af en spuit in de eigen verfspuiterij. Het familiebedrijf bestaat sinds 1941. De kneepjes gingen van vader op zoon. Inmiddels werkt de derde generatie Dankbaar, met een klein team en korte lijnen, vanuit Lichtenvoorde.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-3 sm:mt-8">
               <PhoneButton />
               <OfferteButton />
             </div>
@@ -42,12 +42,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section data-section="credibility" className="on-dark bg-accent text-white">
+      <section data-section="credibility" className="on-dark bg-accent pb-10 text-white">
         <div className="mx-auto grid max-w-7xl sm:grid-cols-3">
           {[
-            ["Sinds 1941", "Familiebedrijf in Lichtenvoorde. Het vak is van vader op zoon doorgegeven."],
-            ["Derde generatie", "Inmiddels werkt de derde generatie Dankbaar. Klein team, korte lijnen."],
-            ["Eigen verfspuiterij", "Prefab, kozijnen en deuren, en ook deuren, radiatoren en meubels voor particulieren."],
+            ["Sinds 1941", "Van vader op zoon, in Lichtenvoorde."],
+            ["Derde generatie", "Klein team, korte lijnen."],
+            ["Eigen verfspuiterij", "Kozijnen, deuren en meubels."],
           ].map(([title, text]) => (
             <div key={title} className="border-t border-white/20 px-5 py-8 sm:border-t-0 sm:border-l sm:first:border-l-0">
               <VanStripe className="mb-4 h-3 w-28 text-white" />
@@ -81,7 +81,15 @@ export default function HomePage() {
           <article key={service.href} data-section={`dienst-${service.title.toLowerCase()}`} className={index % 2 === 0 ? "bg-white" : "bg-putty"}>
             <div className="mx-auto grid max-w-7xl items-center lg:grid-cols-2">
               <div className={`px-5 py-6 lg:py-10 ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                <PhotoFrame src={service.image} alt={service.alt} caption={service.caption} ratio="aspect-[16/10]" />
+                <div className={service.href === "/spuiten" ? "ml-auto w-full max-w-[320px]" : undefined}>
+                  <PhotoFrame
+                    src={service.image}
+                    alt={service.alt}
+                    caption={service.caption}
+                    ratio={service.href === "/spuiten" ? "aspect-[300/184]" : "aspect-[16/10]"}
+                    sizes={service.href === "/spuiten" ? "320px" : "(min-width: 1024px) 46vw, 100vw"}
+                  />
+                </div>
               </div>
               <div className="px-5 py-10 lg:px-12 lg:py-14">
                 <LMark />
@@ -112,12 +120,15 @@ export default function HomePage() {
               <OfferteButton onDark label="Offerte voor spuitwerk" />
             </div>
           </div>
-          <PhotoFrame
-            src="/img/spuiterij.jpg"
-            alt="Hangende kozijnen en deuren in de verfspuiterij van Dankbaar"
-            caption="De spuiterij, met kozijnen en deuren aan de hangrail."
-            ratio="aspect-[4/3]"
-          />
+          <div className="mx-auto w-full max-w-[320px]">
+            <PhotoFrame
+              src="/img/deuren-spuiten.jpg"
+              alt="Deuren in de grondverf en in rood, staand in de spuitruimte"
+              caption="Deuren in de spuiterij, deels in de grondverf en deels in kleur."
+              ratio="aspect-[300/184]"
+              sizes="28rem"
+            />
+          </div>
         </div>
       </section>
 
@@ -199,7 +210,7 @@ export default function HomePage() {
             <LMark />
             <h2 className="text-5xl sm:text-6xl">Derde generatie Dankbaar</h2>
             <p className="mt-4">
-              Dankbaar is een vertrouwde naam in de regio. Geen klus is dezelfde. Bij elke opdracht letten wij op een efficiënte aanpak, geschikte materialen en de geldende regelgeving. Liefde voor het vak, noemen wij dat.
+              Dankbaar is een vertrouwde naam in de regio. Geen klus is dezelfde. Bij elke opdracht letten wij op een efficiënte aanpak, geschikte materialen en de geldende regelgeving.
             </p>
             <p className="mt-4">
               Wij zoeken een ervaren klantenschilder voor de particuliere sector. Rijbewijs B is gewenst.{" "}

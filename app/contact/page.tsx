@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { addressLine, content } from "@/content";
+import { content } from "@/content";
 import { FaqList } from "@/components/site/Faq";
 import { MailAddress, PhoneButton, PhoneText } from "@/components/site/Links";
 import { MailForm } from "@/components/site/MailForm";
@@ -36,24 +36,23 @@ export default function ContactPage() {
               <MailAddress />
             </p>
           </address>
-          <div className="mt-6">
+          <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
             <PhoneButton />
-          </div>
-          <p className="mt-6">
             <a className="link font-semibold underline" href={content.contact.mapHref} target="_blank" rel="noopener noreferrer">
-              Zoek {addressLine} op de kaart
+              Zoek het adres op de kaart
             </a>
-          </p>
-          <div className="mt-8">
-            <PhotoFrame
-              src="/img/pand-lichtenvoorde.jpg"
-              alt="Bedrijfspand en bus van Schildersbedrijf Dankbaar aan de Galileistraat"
-              caption="Het adres: pand en bus aan de Galileistraat 15."
-              ratio="aspect-[940/450]"
-            />
           </div>
         </div>
         <MailForm page="Contact" />
+      </div>
+      <div className="mx-auto max-w-7xl px-5 pb-4">
+        <PhotoFrame
+          src="/img/pand-lichtenvoorde.jpg"
+          alt="Bedrijfspand en bus van Schildersbedrijf Dankbaar aan de Galileistraat"
+          caption="Het adres: pand en bus aan de Galileistraat 15."
+          ratio="aspect-[940/450]"
+          sizes="(min-width: 1024px) 80rem, 100vw"
+        />
       </div>
       <div className="mx-auto max-w-7xl px-5 pb-8">
         <HangRail

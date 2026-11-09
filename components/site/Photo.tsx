@@ -22,7 +22,7 @@ export function PhotoFrame({
         <Image src={src} alt={alt} fill priority={priority} sizes={sizes} className="object-cover" />
         <Hoek />
       </div>
-      <figcaption className="mt-3 text-base leading-snug text-foreground">{caption}</figcaption>
+      <figcaption className="mt-3 text-base leading-snug">{caption}</figcaption>
     </figure>
   );
 }

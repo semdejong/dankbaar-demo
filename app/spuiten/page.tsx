@@ -3,7 +3,6 @@ import { content } from "@/content";
 import { Article, Closing } from "@/components/site/Article";
 import { FaqList } from "@/components/site/Faq";
 import { MailForm } from "@/components/site/MailForm";
-import { PhotoFrame } from "@/components/site/Photo";
 import { Alongside, HangRail, WordmarkLine } from "@/components/site/Plates";
 
 export const metadata: Metadata = {
@@ -21,10 +20,11 @@ export default function SpuitenPage() {
         title="Alles strak, uit de eigen spuiterij"
         lede="Schildersbedrijf Dankbaar heeft een eigen moderne, goed uitgeruste verfspuiterij. Hier komt prefab, kozijn en deur in de basis- of lakverf, en ook het werk voor particulieren."
         image={{
-          src: "/img/spuiterij.jpg",
-          alt: "Kozijnen en deuren hangen aan kettingen in de verfspuiterij",
-          caption: "Verfspuiterij aan de Galileistraat: kozijnen en deuren aan de hangrail.",
-          ratio: "aspect-[4/3]",
+          src: "/img/deuren-spuiten.jpg",
+          alt: "Deuren in de grondverf en in rood, staand in de spuitruimte",
+          caption: "Deuren in de spuiterij, deels in de grondverf en deels in kleur.",
+          ratio: "aspect-[300/184]",
+          frame: "mx-auto w-full max-w-[320px]",
         }}
       >
         <WordmarkLine>Hier komt alles strak voor elkaar.</WordmarkLine>
@@ -55,16 +55,6 @@ export default function SpuitenPage() {
               Handig als u deuren, radiatoren of meubels in een nieuwe kleur wilt laten spuiten. U hoeft dat niet in de kamer te doen: het werk gebeurt in de spuiterij.
             </p>
           </article>
-        </div>
-
-        <div className="mt-12 max-w-xl">
-          <PhotoFrame
-            src="/img/deuren-spuiten.jpg"
-            alt="Deuren in de grondverf en in rood, staand in de spuitruimte"
-            caption="Deuren in de spuiterij, deels in de grondverf en deels in kleur."
-            ratio="aspect-[300/184]"
-            sizes="(min-width: 1024px) 36rem, 100vw"
-          />
         </div>
 
         <div className="mt-14" data-section="spuiten-faq">

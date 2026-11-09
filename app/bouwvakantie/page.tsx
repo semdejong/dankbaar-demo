@@ -17,7 +17,7 @@ export default function BouwvakantiePage() {
         title="Bouwvak van regio midden"
         lede="Wij hanteren de bouwvakantie van regio midden. Dan houden wij ook vakantie."
       >
-        <p className="max-w-[12ch] font-display text-6xl leading-[0.9] sm:text-8xl">Regio midden.</p>
+        <p className="max-w-[12ch] font-display text-6xl leading-[1.02] sm:text-8xl">Regio midden.</p>
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           <article className="border border-foreground/15 bg-putty p-6 sm:p-8">
             <h2 className="text-4xl">Wat vaststaat</h2>

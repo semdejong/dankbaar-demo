@@ -11,9 +11,9 @@ export function FaqList({ items }: { items: readonly FaqItem[] }) {
     <div className="border-y border-foreground/15">
       {items.map((item) => (
         <details key={item.q} className="group border-b border-foreground/15 last:border-b-0">
-          <summary className="flex min-h-12 cursor-pointer items-center justify-between gap-4 py-3 font-semibold">
-            <span>{item.q}</span>
-            <span aria-hidden="true" className="font-display text-3xl leading-none text-brand motion-safe:transition-transform motion-safe:group-open:rotate-45">
+          <summary className="flex min-h-12 cursor-pointer items-start justify-between gap-4 py-3 font-semibold">
+            <span className="pt-1">{item.q}</span>
+            <span aria-hidden="true" className="shrink-0 font-display text-3xl leading-none text-brand motion-safe:transition-transform motion-safe:group-open:rotate-45">
               +
             </span>
           </summary>

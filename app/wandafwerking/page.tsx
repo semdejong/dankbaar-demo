@@ -41,7 +41,7 @@ export default function WandafwerkingPage() {
           ratio: "aspect-[940/450]",
         }}
       >
-        <p className="max-w-[18ch] font-display text-4xl leading-[0.95] sm:text-6xl">
+        <p className="max-w-[18ch] font-display text-4xl leading-[1.02] sm:text-6xl">
           Vlies, vinyl of glasweefsel? Strak? Effen of een patroon?
         </p>
         <p className="mt-6 max-w-[62ch]">

@@ -16,7 +16,7 @@ export function Article({
   crumb: string;
   title: string;
   lede: string;
-  image?: { src: string; alt: string; caption: string; ratio?: string };
+  image?: { src: string; alt: string; caption: string; ratio?: string; frame?: string };
   children: ReactNode;
 }) {
   return (
@@ -39,7 +39,11 @@ export function Article({
               <OfferteButton />
             </div>
           </div>
-          {image ? <PhotoFrame src={image.src} alt={image.alt} caption={image.caption} ratio={image.ratio} priority /> : null}
+          {image ? (
+            <div className={image.frame}>
+              <PhotoFrame src={image.src} alt={image.alt} caption={image.caption} ratio={image.ratio} priority />
+            </div>
+          ) : null}
         </div>
       </section>
       <div className="mx-auto max-w-7xl px-5 py-14 lg:py-16">{children}</div>

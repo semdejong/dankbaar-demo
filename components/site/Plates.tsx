@@ -3,11 +3,10 @@ import { VanStripe } from "@/components/site/Marks";
 
 export function WordmarkLine({ children }: { children: string }) {
   return (
-    <div className="border-y border-foreground/15">
-      <div className="py-8 sm:py-12">
-        <VanStripe className="h-4 w-32 text-brand" />
-        <p className="mt-5 max-w-[14ch] font-display text-5xl leading-[0.92] sm:text-7xl">{children}</p>
-      </div>
+    <div className="py-8 sm:py-12">
+      <VanStripe className="h-3.5 w-full text-brand" />
+      <p className="my-6 max-w-[16ch] font-display text-5xl leading-[1.02] sm:text-7xl">{children}</p>
+      <VanStripe className="h-3.5 w-full text-foreground" />
     </div>
   );
 }
@@ -23,16 +22,17 @@ export function HangRail({
   items: readonly { title: string; text?: string }[];
   columns?: string;
 }) {
+  const compact = items.every((item) => !item.text);
   return (
     <div>
-      {label ? <h2 className="text-4xl sm:text-5xl">{label}</h2> : null}
+      {label ? <h2 className="text-4xl leading-tight sm:text-5xl">{label}</h2> : null}
       {intro ? <p className="mt-4 max-w-[62ch]">{intro}</p> : null}
-      <VanStripe className={`${label || intro ? "mt-8" : ""} h-4 w-full text-foreground`} />
-      <ul className={`grid border-l border-t border-foreground/15 sm:grid-cols-2 ${columns}`}>
+      <VanStripe className={`${label || intro ? "mt-8" : ""} h-3.5 w-full text-brand`} />
+      <ul className={`mt-4 grid gap-3 sm:grid-cols-2 ${columns}`}>
         {items.map((item) => (
-          <li key={item.title} className="border-b border-r border-foreground/15 px-5 py-6">
-            <span className="mb-4 block h-8 w-px bg-brand" aria-hidden="true" />
-            <h3 className="font-display text-3xl leading-none">{item.title}</h3>
+          <li key={item.title} className={`border border-foreground/15 bg-white ${compact ? "px-4 py-4" : "px-5 py-6"}`}>
+            <span className={`${compact ? "mb-2 h-5" : "mb-4 h-8"} block w-px bg-brand`} aria-hidden="true" />
+            <h3 className={`font-display leading-none ${compact ? "text-2xl sm:text-3xl" : "text-3xl"}`}>{item.title}</h3>
             {item.text ? <p className="mt-3 max-w-[36ch] text-base">{item.text}</p> : null}
           </li>
         ))}

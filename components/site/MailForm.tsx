@@ -64,7 +64,7 @@ export function MailForm({ page }: { page: string }) {
         </label>
       </div>
 
-      <button type="submit" data-cta="offerte" className="btn btn-red mt-5">
+      <button type="submit" data-cta="offerte" className="btn btn-red mt-5 max-w-full whitespace-normal text-center">
         Open dit bericht in uw mailprogramma
       </button>
       {note ? (

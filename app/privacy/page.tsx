@@ -47,11 +47,6 @@ export default function PrivacyPage() {
             </article>
           ))}
         </div>
-        <p className="mt-8 text-base">
-          <a className="link underline" href="https://sleads.nl" target="_blank" rel="noopener noreferrer">
-            Concept door Sleads
-          </a>
-        </p>
       </div>
     </section>
   );

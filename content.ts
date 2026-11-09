@@ -104,9 +104,9 @@ export const content = {
       href: "/spuiten",
       title: "Spuitwerk",
       text: "Een eigen verfspuiterij voor prefab onderdelen, kozijnen en deuren in basis- of lakverf. Voor aannemers, interieurbouwers en fabrikanten, en voor particulieren.",
-      image: "/img/spuiterij.jpg",
-      alt: "Kozijnen en deuren hangen aan rails in de verfspuiterij",
-      caption: "Verfspuiterij: kozijnen en deuren aan de hangrail.",
+      image: "/img/deuren-spuiten.jpg",
+      alt: "Deuren in de grondverf en in rood, staand in de spuitruimte",
+      caption: "Deuren in de spuiterij, deels in de grondverf en deels in kleur.",
     },
   ],
 

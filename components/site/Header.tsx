@@ -33,7 +33,7 @@ export function SiteHeader() {
 
   return (
     <header data-section="header" className="sticky top-0 z-40 border-b border-foreground/15 bg-putty">
-      <VanStripe className="h-3 w-full text-brand" />
+      <VanStripe className="h-[var(--stripe-h)] w-full text-brand" />
       <div className="mx-auto flex h-[var(--header-h)] max-w-7xl items-center justify-between gap-4 px-4 sm:px-5">
         <Link href="/" className="inline-flex min-h-11 items-center" aria-label="Schildersbedrijf Dankbaar, naar home">
           <Image
@@ -82,7 +82,7 @@ export function SiteHeader() {
         <nav
           id="mobiel-menu"
           aria-label="Mobiel menu"
-          className="fixed inset-x-0 bottom-0 top-[calc(var(--header-h)+12px)] z-50 overflow-auto bg-putty px-5 py-4 xl:hidden"
+          className="fixed inset-x-0 bottom-0 top-[calc(var(--header-h)+var(--stripe-h))] z-50 overflow-auto bg-putty px-5 py-4 xl:hidden"
         >
           <ul>
             {content.nav.map((item) => (

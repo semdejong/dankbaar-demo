@@ -27,7 +27,7 @@ export default function WinterschilderPage() {
         title="Binnenwerk in de stille maanden"
         lede="Van half november tot half maart is onderhoud aan schilderwerk en behang binnen de moeite waard. De Winterschilder geeft dan een extra korting, mits de klus minimaal 3 mandagen vergt."
       >
-        <p className="max-w-[16ch] font-display text-5xl leading-[0.92] sm:text-7xl">Half november tot half maart.</p>
+        <p className="max-w-[16ch] font-display text-5xl leading-[1.02] sm:text-7xl">Half november tot half maart.</p>
         <p className="mt-6 max-w-[62ch]">
           Echt de moeite waard om uw binnenklus in deze periode uit te laten voeren. Geen moeilijkheden met aanvragen: de korting staat op de factuur.
         </p>
@@ -52,9 +52,9 @@ export default function WinterschilderPage() {
             </p>
           </article>
           <article className="border border-foreground/15 p-6 sm:p-8">
-            <h2 className="text-4xl">Dit zetten wij niet op de pagina</h2>
+            <h2 className="text-4xl">De hoogte hoort u van ons</h2>
             <p className="mt-4">
-              De hoogte van de extra korting. Die is er, en hij is aantrekkelijk, maar een percentage verzinnen wij niet. U hoort hem in het gesprek, en u ziet hem op de factuur.
+              De extra korting staat niet als percentage op deze pagina. U hoort hem in het gesprek, en u ziet hem op de factuur.
             </p>
           </article>
         </div>

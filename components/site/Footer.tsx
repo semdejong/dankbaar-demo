@@ -65,7 +65,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-white/20">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-6 text-base sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 pb-16 pt-6 text-base sm:flex-row sm:items-start sm:justify-between">
           <p>
             {content.company.name} · {addressLine}
           </p>

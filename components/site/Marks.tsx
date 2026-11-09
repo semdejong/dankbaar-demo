@@ -1,16 +1,8 @@
 export function VanStripe({ className = "" }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 220 18" fill="none" aria-hidden="true">
-      <path
-        d="M1 5h78c10 0 16-3 31-3s21 3 31 3h78"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-      <path
-        d="M1 12.5h78c10 0 16-3 31-3s21 3 31 3h78"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
+    <svg className={className} viewBox="0 0 240 16" preserveAspectRatio="none" fill="none" aria-hidden="true">
+      <path d="M0 3.2h86c12 0 18-4.2 34-4.2s22 4.2 34 4.2h86" stroke="currentColor" strokeWidth="1.6" vectorEffect="non-scaling-stroke" />
+      <path d="M0 10.4h86c12 0 18-4.2 34-4.2s22 4.2 34 4.2h86" stroke="currentColor" strokeWidth="1.6" vectorEffect="non-scaling-stroke" />
     </svg>
   );
 }
