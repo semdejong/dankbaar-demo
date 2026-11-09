@@ -23,6 +23,15 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      { source: "/schilderen-lichtenvoorde", destination: "/schilderwerk", permanent: false },
+      { source: "/schilderen", destination: "/schilderwerk", permanent: false },
+      { source: "/over-dankbaar", destination: "/over-ons", permanent: false },
+      { source: "/9-btw-regeling", destination: "/9-procent-btw", permanent: false },
+      { source: "/vacatures", destination: "/vacature", permanent: false },
+    ];
+  },
 };
 
 export default nextConfig;
