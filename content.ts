@@ -117,7 +117,7 @@ export const content = {
     },
     {
       q: "Wat houdt de Winterschilder in?",
-      a: "Van half november tot half maart geven wij een extra korting op onderhoud van binnenschilderwerk en behang van minimaal 3 mandagen. De korting verrekenen wij direct op de factuur. Hoe hoog die extra korting is, staat hier niet als percentage; dat bespreken wij bij de kennismaking. Waar de regeling geldt, komt daar 9% btw op het arbeidsloon bij.",
+      a: "Van half november tot half maart geven wij een extra korting op onderhoud van binnenschilderwerk en behang van minimaal 3 mandagen. De korting verrekenen wij direct op de factuur. Hoe hoog die extra korting is, bespreken wij bij de kennismaking. Waar de regeling geldt, komt daar 9% btw op het arbeidsloon bij.",
       link: { href: "/winterschilder", label: "Lees de Winterschilder" },
     },
     {

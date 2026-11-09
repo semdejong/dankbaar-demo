@@ -6,7 +6,7 @@ import { Alongside, HangRail, WordmarkLine } from "@/components/site/Plates";
 export const metadata: Metadata = {
   title: "Winterschilder",
   description:
-    "Van half november tot half maart extra korting op binnenschilderwerk en behang van minimaal 3 mandagen. Direct op de factuur. Geen vast percentage op deze pagina.",
+    "Van half november tot half maart extra korting op binnenschilderwerk en behang van minimaal 3 mandagen. Direct op de factuur.",
 };
 
 const rows = [
@@ -14,7 +14,7 @@ const rows = [
   { title: "Welk werk", text: "Onderhoud van schilderwerk en behang, en alleen binnen." },
   { title: "Omvang", text: "Minimaal 3 mandagen. Kleinere klussen vallen erbuiten." },
   { title: "Factuur", text: "De korting wordt direct met de factuur verrekend. Geen aparte aanvraag of toezegging vooraf." },
-  { title: "Hoogte", text: "Een vast percentage staat hier niet. Vraag ons de hoogte bij de kennismaking." },
+  { title: "Hoogte", text: "Bespreken wij bij de kennismaking." },
   { title: "Btw", text: "Daarnaast 9% op het arbeidsloon, waar die regeling van toepassing is." },
 ];
 
@@ -54,7 +54,7 @@ export default function WinterschilderPage() {
           <article className="border border-foreground/15 p-6 sm:p-8">
             <h2 className="text-4xl">De hoogte hoort u van ons</h2>
             <p className="mt-4">
-              De extra korting staat niet als percentage op deze pagina. U hoort hem in het gesprek, en u ziet hem op de factuur.
+              Hoe hoog de extra korting is, hoort u in het gesprek. Daarna ziet u hem terug op de factuur, zonder aanvraag of formulieren.
             </p>
           </article>
         </div>

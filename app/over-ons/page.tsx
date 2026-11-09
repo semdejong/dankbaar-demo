@@ -92,7 +92,7 @@ export default function OverOnsPage() {
             label="De hele Achterhoek"
             intro="Ons werkgebied is de hele Achterhoek, met name deze plaatsen."
             items={content.area.map((town) => ({ title: town }))}
-            columns="lg:grid-cols-5"
+            columns="grid-cols-2 lg:grid-cols-5"
           />
         </div>
 
@@ -100,7 +100,7 @@ export default function OverOnsPage() {
           <article className="border border-foreground/15 p-6">
             <h2 className="text-3xl">Bouwvak</h2>
             <p className="mt-3">
-              Wij hanteren de bouwvakantie van regio midden. Dan houden wij ook vakantie. Data zetten wij niet op de pagina.{" "}
+              Wij hanteren de bouwvakantie van regio midden. Dan houden wij ook vakantie. De data hoort u van ons.{" "}
               <Link href="/bouwvakantie" className="link font-semibold underline">
                 Korte toelichting
               </Link>

@@ -5,7 +5,7 @@ import { Article, Closing } from "@/components/site/Article";
 export const metadata: Metadata = {
   title: "Bouwvakantie",
   description:
-    "Schildersbedrijf Dankbaar houdt de bouwvakantie van regio midden. Geen data op deze pagina; bel of mail voor de periode.",
+    "Schildersbedrijf Dankbaar houdt de bouwvakantie van regio midden. Bel of mail voor de data.",
 };
 
 export default function BouwvakantiePage() {
@@ -22,13 +22,13 @@ export default function BouwvakantiePage() {
           <article className="border border-foreground/15 bg-putty p-6 sm:p-8">
             <h2 className="text-4xl">Wat vaststaat</h2>
             <p className="mt-4">
-              De bouwvak van Schildersbedrijf Dankbaar is die van regio midden. In die periode is de werkplaats met vakantie. Een kalender met dagen publiceren wij hier niet.
+              De bouwvak van Schildersbedrijf Dankbaar is die van regio midden. In die periode is de werkplaats met vakantie. De precieze data verschillen per jaar.
             </p>
           </article>
           <article className="border border-foreground/15 p-6 sm:p-8">
             <h2 className="text-4xl">Wat u ons vraagt</h2>
             <p className="mt-4">
-              Plant u schilderwerk, glas of behang rond die weken, bel of mail dan. Wij noemen de dagen van het komende seizoen zelf. Een jaartal zetten wij niet vast op deze pagina.
+              Plant u schilderwerk, glas of behang rond die weken, bel of mail dan. Wij noemen de dagen van het komende seizoen zelf. Zo weet u ruim vooraf waar u aan toe bent.
             </p>
             <p className="mt-4">
               <Link href="/contact" className="link font-semibold underline">

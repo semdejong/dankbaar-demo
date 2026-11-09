@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pagina niet gevonden · Schildersbedrijf Dankbaar",
+  robots: { index: false, follow: false },
+};
 import { content, phoneHref } from "@/content";
 import { LMark } from "@/components/site/Marks";
 

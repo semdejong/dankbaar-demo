@@ -64,7 +64,7 @@ export default function HomePage() {
             label="De hele Achterhoek"
             intro="Ons werkgebied is de hele Achterhoek. Met name in deze plaatsen komen wij."
             items={content.area.map((town) => ({ title: town }))}
-            columns="lg:grid-cols-5"
+            columns="grid-cols-2 lg:grid-cols-5"
           />
         </div>
       </section>
@@ -158,10 +158,10 @@ export default function HomePage() {
       <section data-section="winterschilder" className="bg-putty">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 lg:grid-cols-[0.9fr_1.1fr] lg:py-20">
           <div>
-            <YearTick />
+            <LMark />
             <h2 className="text-5xl sm:text-6xl">Winterschilder</h2>
             <p className="mt-4">
-              Van half november tot half maart geven wij een extra korting op onderhoud van binnenschilderwerk en behang van minimaal 3 mandagen. De korting staat direct op de factuur. Een percentage vermelden wij hier niet; vraag ons die bij de kennismaking.
+              Van half november tot half maart geven wij een extra korting op onderhoud van binnenschilderwerk en behang van minimaal 3 mandagen. De korting staat direct op de factuur. De hoogte van de korting bespreken wij bij de kennismaking.
             </p>
             <p className="mt-4">
               Waar de regeling van toepassing is, geldt daarnaast 9% btw op het arbeidsloon.{" "}
@@ -180,7 +180,7 @@ export default function HomePage() {
               ["Werk", "Onderhoud binnen: schilderwerk en behang"],
               ["Omvang", "Minimaal 3 mandagen"],
               ["Verrekening", "Direct op de factuur"],
-              ["Hoogte van de korting", "Vraag ons die; geen vast percentage op deze pagina"],
+              ["Hoogte van de korting", "Bespreken wij bij de kennismaking"],
               ["Btw", "9% op het arbeidsloon, waar dat geldt"],
             ].map(([term, detail]) => (
               <div key={term} className="grid gap-1 border-b border-foreground/15 px-5 py-4 last:border-b-0 sm:grid-cols-[12rem_1fr] sm:gap-4">
@@ -217,7 +217,7 @@ export default function HomePage() {
               <Link href="/vacature" className="link font-semibold underline">
                 Lees de vacature
               </Link>{" "}
-              en neem contact op. Een sollicitatieformulier hebben wij niet.
+              en neem contact op.
             </p>
             <Link href="/over-ons" className="mt-6 inline-flex min-h-11 items-center font-semibold underline">
               Meer over het familiebedrijf

@@ -20,18 +20,18 @@ const checks = [
 const archive = [
   {
     src: "/img/Dankbaar-1.jpg",
-    alt: "Bakstenen winkelpand met witte kozijnen, archieffoto zonder projectnaam",
-    caption: "Archieffoto van een bakstenen pand met geschilderd houtwerk. Geen projectnaam.",
+    alt: "Bakstenen winkelpand met witte kozijnen, archieffoto",
+    caption: "Archieffoto van een bakstenen pand met geschilderd houtwerk.",
   },
   {
     src: "/img/Dankbaar-2.jpg",
-    alt: "Lichtgekleurde villa met gele accenten, archieffoto zonder projectnaam",
-    caption: "Archieffoto van een villa met geschilderde geveldetails. Geen opdrachtgever vermeld.",
+    alt: "Lichtgekleurde villa met gele accenten, archieffoto",
+    caption: "Archieffoto van een villa met geschilderde geveldetails.",
   },
   {
     src: "/img/Dankbaar-3.jpg",
-    alt: "Bakstenen woonhuis met witte kozijnen, archieffoto zonder projectnaam",
-    caption: "Archieffoto van een woonhuis met wit geschilderde kozijnen. Geen projecttitel.",
+    alt: "Bakstenen woonhuis met witte kozijnen, archieffoto",
+    caption: "Archieffoto van een woonhuis met wit geschilderde kozijnen.",
   },
   {
     src: "/img/DSCF1043_3545.jpg",
@@ -105,7 +105,7 @@ export default function SchilderwerkPage() {
         <div className="mt-16">
           <h2 className="text-4xl">Uit het archief</h2>
           <p className="mt-4 max-w-[68ch]">
-            Deze foto&apos;s komen uit het eigen archief. Er staat geen projecttitel of opdrachtgever bij, en die verzinnen wij niet.
+            Deze foto&apos;s komen uit het eigen archief. Zo ziet u het soort werk dat uit de werkplaats komt.
           </p>
           <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {archive.map((photo) => (

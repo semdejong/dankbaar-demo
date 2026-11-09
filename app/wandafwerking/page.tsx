@@ -69,7 +69,7 @@ export default function WandafwerkingPage() {
           <Link href="/winterschilder" className="link font-semibold underline">
             Winterschilder
           </Link>{" "}
-          vallen. De extra korting zetten wij niet als percentage op deze pagina. Die vraagt u bij de kennismaking.
+          vallen. De hoogte van de extra korting bespreken wij bij de kennismaking.
         </p>
 
         <Alongside

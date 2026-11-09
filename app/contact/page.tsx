@@ -45,7 +45,7 @@ export default function ContactPage() {
         </div>
         <MailForm page="Contact" />
       </div>
-      <div className="mx-auto max-w-7xl px-5 pb-4">
+      <div className="mx-auto max-w-7xl px-5 pb-12">
         <PhotoFrame
           src="/img/pand-lichtenvoorde.jpg"
           alt="Bedrijfspand en bus van Schildersbedrijf Dankbaar aan de Galileistraat"
@@ -59,7 +59,7 @@ export default function ContactPage() {
           label="Waar de bus komt"
           intro="De hele Achterhoek, met name deze plaatsen. Voor een kennismaking belt of mailt u; wij spreken daarna af wat er moet gebeuren."
           items={content.area.map((town) => ({ title: town }))}
-          columns="lg:grid-cols-5"
+          columns="grid-cols-2 lg:grid-cols-5"
         />
       </div>
       <div className="mx-auto max-w-7xl px-5 pb-16 pt-10">
