@@ -4,6 +4,7 @@ import { Article, Closing } from "@/components/site/Article";
 import { FaqList } from "@/components/site/Faq";
 import { MailForm } from "@/components/site/MailForm";
 import { PhotoFrame } from "@/components/site/Photo";
+import { Alongside, HangRail, WordmarkLine } from "@/components/site/Plates";
 
 export const metadata: Metadata = {
   title: "Verfspuiterij",
@@ -26,7 +27,22 @@ export default function SpuitenPage() {
           ratio: "aspect-[4/3]",
         }}
       >
-        <div className="grid gap-6 lg:grid-cols-2">
+        <WordmarkLine>Hier komt alles strak voor elkaar.</WordmarkLine>
+        <div className="mt-12">
+          <HangRail
+            label="Wat aan de rail hangt"
+            intro="Basisverf of lakverf. Wij zetten het onderdeel professioneel in de verf die bij de opdracht hoort."
+            items={[
+              { title: "Prefab onderdelen", text: "Voor wie zelf maakt en up to date wil afleveren." },
+              { title: "Kozijnen", text: "In de basis- of lakverf, in de eigen spuiterij." },
+              { title: "Deuren", text: "Voor aannemers en makers, en ook voor particulieren." },
+              { title: "Radiatoren", text: "Particulier werk: een radiator in een nieuwe kleur, gespoten in de spuiterij." },
+              { title: "Meubels", text: "Ook meubels kunnen in een nieuwe kleur, in dezelfde spuiterij." },
+              { title: "Basis of lak", text: "Twee afwerkingen. Welke het wordt, spreekt u met ons af." },
+            ]}
+          />
+        </div>
+        <div className="mt-14 grid gap-6 lg:grid-cols-2">
           <article data-section="spuiten-zakelijk" className="border border-foreground/15 bg-putty p-6 sm:p-8">
             <h2 className="text-4xl">Voor aannemers en makers</h2>
             <p className="mt-4">
@@ -58,6 +74,13 @@ export default function SpuitenPage() {
           </div>
         </div>
 
+        <Alongside
+          items={[
+            { href: "/schilderwerk", title: "Schilderwerk", text: "Ter plaatse, binnen en buiten, als spuiten niet de route is." },
+            { href: "/beglazing", title: "Beglazing", text: "Glas in de kozijnen die ook bij ons in de lak kunnen." },
+            { href: "/contact", title: "Aanleveren", text: "Bel of mail wat u wilt brengen: onderdeel, deur of meubel." },
+          ]}
+        />
         <div className="mt-14 max-w-3xl">
           <MailForm page="Spuitwerk" />
         </div>

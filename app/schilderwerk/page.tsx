@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Article, Closing } from "@/components/site/Article";
 import { PhotoFrame } from "@/components/site/Photo";
+import { Alongside, HangRail, WordmarkLine } from "@/components/site/Plates";
 
 export const metadata: Metadata = {
   title: "Schilderwerk binnen en buiten",
@@ -10,10 +11,10 @@ export const metadata: Metadata = {
 };
 
 const checks = [
-  "Is er sprake van achterstallig onderhoud?",
-  "Zijn hout- of betonreparaties nodig?",
-  "Moeten oude verflagen worden verwijderd?",
-  "Zijn de kitranden nog in orde?",
+  { title: "Achterstallig onderhoud", text: "Is er sprake van achterstallig onderhoud? Dat nemen wij als eerste door." },
+  { title: "Hout of beton", text: "Zijn reparaties nodig aan hout of beton, dan leggen wij die vast vóór de verf." },
+  { title: "Oude verflagen", text: "Moeten oude lagen eraf, dan hoort dat bij de basis." },
+  { title: "Kitranden", text: "Zijn de kitranden nog in orde? Ook dat bekijken wij met u." },
 ];
 
 const archive = [
@@ -58,20 +59,30 @@ export default function SchilderwerkPage() {
           caption: "Houtreparatie aan een kozijn, voordat er opnieuw geschilderd wordt.",
         }}
       >
-        <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="max-w-[68ch]">
-            <h2 className="text-4xl">Eerst inventariseren</h2>
+        <WordmarkLine>Beschermd tegen weer en wind.</WordmarkLine>
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          <article className="border border-foreground/15 bg-putty p-6 sm:p-8">
+            <h2 className="text-4xl">Binnen</h2>
             <p className="mt-4">
-              Voordat wij aan de slag gaan, bekijken wij met u wat er moet gebeuren. Aandacht voor de ondergrond legt een sterke basis. Het schilderwerk gaat dan langer mee.
+              Woning of bedrijfspand: wij nemen het schilderwerk binnen uit handen, zodat het er netjes uitziet. Onderhoud binnen kan in de winter onder de Winterschilder vallen.
             </p>
-            <ul className="mt-6 space-y-3">
-              {checks.map((item) => (
-                <li key={item} className="border-l-[3px] border-brand pl-4">
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-6">
+          </article>
+          <article className="border border-foreground/15 p-6 sm:p-8">
+            <h2 className="text-4xl">Buiten</h2>
+            <p className="mt-4">
+              Buiten gaat het om uitstraling én bescherming. Weer en wind krijgen minder vat als de ondergrond eerst op orde is.
+            </p>
+          </article>
+        </div>
+        <div className="mt-14 grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+          <div>
+            <HangRail
+              label="Eerst inventariseren"
+              intro="Voordat wij aan de slag gaan, bekijken wij met u wat er moet gebeuren. Aandacht voor de ondergrond legt een sterke basis. Het schilderwerk gaat dan langer mee."
+              items={checks}
+              columns="lg:grid-cols-2"
+            />
+            <p className="mt-6 max-w-[62ch]">
               In de winter, van half november tot half maart, geldt de{" "}
               <Link href="/winterschilder" className="link font-semibold underline">
                 Winterschilder
@@ -102,6 +113,13 @@ export default function SchilderwerkPage() {
             ))}
           </div>
         </div>
+        <Alongside
+          items={[
+            { href: "/beglazing", title: "Beglazing", text: "Glas in dezelfde kozijnen, met advies en plaatsing." },
+            { href: "/spuiten", title: "Spuitwerk", text: "Kozijnen en deuren in de eigen verfspuiterij." },
+            { href: "/wandafwerking", title: "Wanden", text: "Behang als de wand de sfeer moet dragen." },
+          ]}
+        />
       </Article>
       <Closing
         title="Schilderwerk bespreken?"

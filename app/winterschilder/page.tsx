@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Article, Closing } from "@/components/site/Article";
+import { Alongside, HangRail, WordmarkLine } from "@/components/site/Plates";
 
 export const metadata: Metadata = {
   title: "Winterschilder",
@@ -9,12 +10,12 @@ export const metadata: Metadata = {
 };
 
 const rows = [
-  ["Periode", "Half november tot half maart."],
-  ["Welk werk", "Onderhoud van schilderwerk en behang binnen."],
-  ["Minimale omvang", "Minimaal 3 mandagen."],
-  ["De extra korting", "Aantrekkelijk, en direct verrekend op de factuur. Geen aparte aanvraag of toezegging vooraf."],
-  ["Hoogte", "Wij noemen hier geen percentage. Vraag ons de hoogte bij de kennismaking."],
-  ["Btw", "Daarnaast de 9%-regeling op het arbeidsloon, waar die van toepassing is."],
+  { title: "Periode", text: "Half november tot half maart. Buiten die maanden geldt deze extra korting niet." },
+  { title: "Welk werk", text: "Onderhoud van schilderwerk en behang, en alleen binnen." },
+  { title: "Omvang", text: "Minimaal 3 mandagen. Kleinere klussen vallen erbuiten." },
+  { title: "Factuur", text: "De korting wordt direct met de factuur verrekend. Geen aparte aanvraag of toezegging vooraf." },
+  { title: "Hoogte", text: "Een vast percentage staat hier niet. Vraag ons de hoogte bij de kennismaking." },
+  { title: "Btw", text: "Daarnaast 9% op het arbeidsloon, waar die regeling van toepassing is." },
 ];
 
 export default function WinterschilderPage() {
@@ -26,21 +27,57 @@ export default function WinterschilderPage() {
         title="Binnenwerk in de stille maanden"
         lede="Van half november tot half maart is onderhoud aan schilderwerk en behang binnen de moeite waard. De Winterschilder geeft dan een extra korting, mits de klus minimaal 3 mandagen vergt."
       >
-        <dl className="border border-foreground/15">
-          {rows.map(([term, detail]) => (
-            <div key={term} className="grid gap-1 border-b border-foreground/15 px-5 py-4 last:border-b-0 sm:grid-cols-[14rem_1fr] sm:gap-6">
-              <dt className="font-semibold">{term}</dt>
-              <dd>{detail}</dd>
-            </div>
-          ))}
-        </dl>
-        <p className="mt-8 max-w-[68ch]">
-          De voorwaarden van 9% btw op schilderwerk aan woningen ouder dan 2 jaar staan op een eigen pagina.{" "}
+        <p className="max-w-[16ch] font-display text-5xl leading-[0.92] sm:text-7xl">Half november tot half maart.</p>
+        <p className="mt-6 max-w-[62ch]">
+          Echt de moeite waard om uw binnenklus in deze periode uit te laten voeren. Geen moeilijkheden met aanvragen: de korting staat op de factuur.
+        </p>
+
+        <div className="mt-12">
+          <HangRail label="Wat vaststaat" items={rows} />
+        </div>
+
+        <div className="mt-14 grid gap-6 lg:grid-cols-2">
+          <article className="border border-foreground/15 bg-putty p-6 sm:p-8">
+            <h2 className="text-4xl">Dit werk telt mee</h2>
+            <p className="mt-4">
+              Onderhoud aan schilderwerk binnen, en behangwerk binnen. Beide alleen als de opdracht minimaal drie mandagen vergt.{" "}
+              <Link href="/schilderwerk" className="link font-semibold underline">
+                Schilderwerk
+              </Link>{" "}
+              en{" "}
+              <Link href="/wandafwerking" className="link font-semibold underline">
+                wandafwerking
+              </Link>{" "}
+              beschrijven wat wij dan doen.
+            </p>
+          </article>
+          <article className="border border-foreground/15 p-6 sm:p-8">
+            <h2 className="text-4xl">Dit zetten wij niet op de pagina</h2>
+            <p className="mt-4">
+              De hoogte van de extra korting. Die is er, en hij is aantrekkelijk, maar een percentage verzinnen wij niet. U hoort hem in het gesprek, en u ziet hem op de factuur.
+            </p>
+          </article>
+        </div>
+
+        <div className="mt-14">
+          <WordmarkLine>Direct op de factuur.</WordmarkLine>
+        </div>
+
+        <p className="mt-10 max-w-[68ch]">
+          Los van de winterkorting geldt voor veel woningen 9% btw op schilderwerk. De voorwaarden: ouder dan 2 jaar, en voor minimaal 50% in gebruik als woonruimte.{" "}
           <Link href="/9-procent-btw" className="link font-semibold underline">
             Lees wanneer 9% geldt
           </Link>
-          . Buitenwerk valt niet onder deze winterkorting; die geldt voor onderhoud binnen.
+          . Buitenwerk valt niet onder de Winterschilder.
         </p>
+
+        <Alongside
+          items={[
+            { href: "/schilderwerk", title: "Schilderwerk", text: "Binnen onderhoud dat in de winter onder de korting kan vallen." },
+            { href: "/wandafwerking", title: "Behang", text: "Behangwerk vanaf 3 mandagen telt mee." },
+            { href: "/9-procent-btw", title: "9% btw", text: "Het lage tarief op arbeidsloon, waar het geldt." },
+          ]}
+        />
       </Article>
       <Closing
         title="Binnenklus in de winter plannen?"

@@ -5,6 +5,7 @@ import { FaqList } from "@/components/site/Faq";
 import { MailAddress, OfferteButton, PhoneButton, PhoneText } from "@/components/site/Links";
 import { LMark, VanStripe, YearTick } from "@/components/site/Marks";
 import { PhotoFrame } from "@/components/site/Photo";
+import { HangRail, WordmarkLine } from "@/components/site/Plates";
 
 export const metadata: Metadata = {
   description: content.seo.description,
@@ -54,6 +55,17 @@ export default function HomePage() {
               <p className="mt-3 text-base text-white">{text}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section data-section="werkgebied" className="bg-white">
+        <div className="mx-auto max-w-7xl px-5 py-14 lg:py-16">
+          <HangRail
+            label="De hele Achterhoek"
+            intro="Ons werkgebied is de hele Achterhoek. Met name in deze plaatsen komen wij."
+            items={content.area.map((town) => ({ title: town }))}
+            columns="lg:grid-cols-5"
+          />
         </div>
       </section>
 
@@ -166,6 +178,12 @@ export default function HomePage() {
               </div>
             ))}
           </dl>
+        </div>
+      </section>
+
+      <section data-section="lijn" className="bg-white">
+        <div className="mx-auto max-w-7xl px-5">
+          <WordmarkLine>Liefde voor het vak.</WordmarkLine>
         </div>
       </section>
 
